@@ -1,7 +1,7 @@
 # Electrostatic_phase_plate
 Source code for the image analysis of electron holography characterization of an electrostatic phase plate
 
-In the repository:
+**In the repository**:
 Python File for the image analysis of both 2D profiles and 1D linescan between each electrode in the phase plate.
 
 **The packages/libraries used for analysis are:**

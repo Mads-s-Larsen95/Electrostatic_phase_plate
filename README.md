@@ -2,9 +2,13 @@
 Source code for the image analysis of electron holography characterization of an electrostatic phase plate
 
 **In the repository**:
-Two Python Files for Image analysis:
- * "_Algo1" is the first stitching, where the raw data is first analyzed by means of phase reconstruction and phase unwrapping
- * "_Algo2" is the second image analysis, where the slope in phase is first measured and an average slope is then estimated. The average slope is then used to realign the holograms, where the average phase of each hologram is first subtracted and then the overall trend is added to that hologram. This is repeated for the entirity of the images produced from "_Algo1".
+Python file for image analysis of the electrostatic phase plate in action for 2V applied. The inputs are .dm4 (Gatan) objects. 
+ * Creates the 2D map observed in the main article
+   *   The location in (x,y) is found from the source of the image
+   *   To measure the offset, the last 30 rows/columns is used as an offset for the neighboring image
+   *   Whenever the y position is changed (rows), the offset is taken from the last 30 rows of the first image in the adjacent image
+   *   Whenever the x position is changed (columns), the offset is taken from the last 30 columns of image coming before
+
 
 **The packages/libraries used for analysis are:**
  * Numpy (NP)
